@@ -59,7 +59,8 @@ def export():
     for store in region_dict:
         export_sheet.append([store, region_dict[store]["Adress"], region_dict[store]["Ort"], region_dict[store]["Tid"]])
     
-    export.save("test_file.xlsx")
+    file = filedialog.asksaveasfile(defaultextension=".xlsx")
+    export.save(file.name)
     
 
 root = tk.Tk()
