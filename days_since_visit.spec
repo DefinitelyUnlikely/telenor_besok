@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['days_since_visit.py'],
+    ['days_since_visit.pyw'],
     pathex=[],
     binaries=[],
     datas=[],
