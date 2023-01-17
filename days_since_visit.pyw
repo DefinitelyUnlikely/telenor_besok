@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from openpyxl import load_workbook, Workbook
-from datetime import date
+from datetime import date, datetime
 
 
 class App():
@@ -53,8 +53,9 @@ class App():
                         row[0].value]["Tid"] > (date.today() -
                                             row[2].value.date()).days:
                     # The result is in hours, days wanted, so .days is used.
-                    region_dict[row[0].value]["Tid"] = (date.today() -
-                                                    row[2].value.date()).days
+                    if isinstance(row[2].value, datetime):
+                        region_dict[row[0].value]["Tid"] = (date.today() -
+                                                        row[2].value.date()).days
 
         # Creating new workbook and new active worksheet. 
         export = Workbook()
