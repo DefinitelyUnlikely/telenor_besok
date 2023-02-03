@@ -54,7 +54,7 @@ class App():
         to create a new excel file with store and days since you visisted. 
         """
         # creating dictionary on form {butik: {adress: , ort: , Tid: , Lager: }}
-        region_dict = {row[0].value: {"Adress": row[1].value, "Ort": row[2].value, "Tid": "N/A", "Lager": 0}
+        region_dict = {row[0].value: {"Adress": row[1].value, "Ort": row[2].value, "Tid": "N/A", "Lager": "Not Found"}
                     for row in self.store_sheet}
 
         # iterate over visit_sheet to extract visit date
