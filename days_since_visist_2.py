@@ -90,6 +90,11 @@ class App():
 
         file = filedialog.asksaveasfile(defaultextension=".xlsx")
         export.save(file.name)
+        
+        exportLabel = tk.Label(text="Fil exporterad")
+        exportLabel.place(x=160, y=160)
+
+        
 
 
 # Initalize class object.
